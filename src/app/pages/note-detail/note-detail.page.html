@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{note.title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClickDeleteNote(note.id)">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-textarea
+          (keyup)="onInputEditNote(note, $event)"
+          [(ngModel)]="note.text"
+          placeholder="Empieza escribiendo aquí..."
+          auto-grow
+        >
+        </ion-textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

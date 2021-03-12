@@ -1,0 +1,1 @@
+## A simple Ionic/Angular App with NgRx State and State Persistency with Storage

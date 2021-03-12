@@ -1,0 +1,7 @@
+{
+  "name": "ionic-ngrx-example",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
