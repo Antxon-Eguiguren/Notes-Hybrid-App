@@ -1,1 +1,1 @@
-## A simple Ionic/Angular App with NgRx State and State Persistency with Storage
+## A simple Ionic/Angular App with NgRx State and State Persistency with LocalStorage using Meta Reducers

@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './state/reducers/note.reducer';
+import { notesMetaReducer } from './state/storage.metareducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,10 @@ import { reducer } from './state/reducers/note.reducer';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    StoreModule.forRoot({notes: reducer})
+    StoreModule.forRoot(
+      {notesStore: reducer},
+      {metaReducers: [notesMetaReducer]}
+    )
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

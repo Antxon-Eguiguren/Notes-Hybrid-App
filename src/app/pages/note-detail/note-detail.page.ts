@@ -29,7 +29,7 @@ export class NoteDetailPage implements OnInit {
   }
 
   onInputEditNote(note: Note, event) {
-    this.store.dispatch(new NoteActions.EditNote({note, text: event.target.innerHTML}));
+    this.store.dispatch(new NoteActions.EditNote({note, text: event.target.value}));
   }
 
 }
